@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for modul labels belonging to extension 'geckoboard'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="geckoPusher.name">Geckoboard Pusher</label>
+			<label index="geckoPusher.description">Build info for widgets for geckoboard</label>
+
+			<label index="label.configuredWidgets">Select widgets to push to Geckoboard</label>
+			<label index="label.widgetId">Geckoboard widget ID</label>
+			<label index="label.widgetType">Geckoboard widget type</label>
+
+			<label index="label.Tx_Geckoboard_Widgets_PageCount">Count of active pages</label>
+			<label index="label.Tx_Geckoboard_Widgets_LastChangedPages">Count or list of last changed pages</label>
+			<label index="label.Tx_Geckoboard_Widgets_LatestNewPages">Count or list of latest new pages</label>
+
+			<label index="label.NumberAndSecondaryStat">Display as number</label>
+			<label index="label.Text">Display as text list</label>
+
+			<label index="error.chooseAWidget">Please choose at least one widget.</label>
+			<label index="error.widgetError">The widget "%s" is missing some information</label>
+			<label index="error.noWidgetId">Please enter the Geckoboard Widget ID.</label>
+			<label index="error.noWidgetType">Please enter the Geckoboard Widget Type.</label>
+			<label index="error.noWidgetClass">Fatal error! The class for this widget could not be located.</label>
+			<label index="error.noWidgetConfig">The widget configuration is missing.</label>
+
+			<label index="extmng.apiKey">Geckoboard API Key</label>
+			<label index="extmng.dateFormat">Date format: default %d.%m.%Y %H:%i</label>
+			<label index="extmng.dokTypes">Which page types should be included: comma-separated list</label>
+			<label index="extmng.hours">Data from the last how many hours</label>
+		</languageKey>
+	</data>
+</T3locallang>

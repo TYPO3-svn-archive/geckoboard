@@ -1,0 +1,11 @@
+  # cat=basic/dev/161; type=input; label=LLL:EXT:geckoboard/Resources/Private/Language/locallang_be.xml:extmng.apiKey
+apiKey =
+
+  # cat=basic/dev/161; type=input; label=LLL:EXT:geckoboard/Resources/Private/Language/locallang_be.xml:extmng.dateFormat
+dateFormat =
+
+  # cat=basic/dev/161; type=input; label=LLL:EXT:geckoboard/Resources/Private/Language/locallang_be.xml:extmng.dokTypes
+dokTypes = 1
+
+  # cat=basic/dev/161; type=input; label=LLL:EXT:geckoboard/Resources/Private/Language/locallang_be.xml:extmng.hours
+hours = 24
