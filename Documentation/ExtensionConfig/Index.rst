@@ -6,8 +6,8 @@
 .. include:: ../Includes.txt
 .. include:: Images.txt
 
-Getting started
-===============
+Extension Manager Configuration
+===============================
 
 .. contents::
    :local:

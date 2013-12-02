@@ -4,13 +4,23 @@ if (!defined('TYPO3_MODE')) {
 	die('Access denied.');
 }
 
-Tx_Extbase_Utility_Extension::configurePlugin(
-	$_EXTKEY,
-	'Task',
-	array(
-		'Connector' => 'push',
-	)
-);
+if (t3lib_div::int_from_ver( TYPO3_version ) < 6000000 ) {
+	Tx_Extbase_Utility_Extension::configurePlugin(
+		$_EXTKEY,
+		'Task',
+		array(
+			'Connector' => 'push',
+		)
+	);
+} else {
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+		$_EXTKEY,
+		'Task',
+		array(
+			'Connector' => 'push',
+		)
+	);
+}
 
 	// register information for the image import tasks
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']['Tx_Geckoboard_Task_GeckoPusher'] = array(

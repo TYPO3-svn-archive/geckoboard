@@ -334,17 +334,19 @@ class Tx_Geckoboard_Task_GeckoPusherAdditionalFields implements tx_scheduler_Add
 	 * @return void
 	 */
 	protected function initializeClassLoader() {
-		if (!class_exists('Tx_Extbase_Utility_ClassLoader', FALSE)) {
-			require(t3lib_extmgm::extPath('extbase') . 'Classes/Utility/ClassLoader.php');
-		}
+		if (t3lib_div::int_from_ver( TYPO3_version ) < 6000000 ) {
+			if (!class_exists('Tx_Extbase_Utility_ClassLoader', FALSE)) {
+				require(t3lib_extmgm::extPath('extbase') . 'Classes/Utility/ClassLoader.php');
+			}
 
-		$classLoader = new Tx_Extbase_Utility_ClassLoader();
-		spl_autoload_register(
-			array(
-				$classLoader,
-				'loadClass'
-			)
-		);
+			$classLoader = new Tx_Extbase_Utility_ClassLoader();
+			spl_autoload_register(
+				array(
+					$classLoader,
+					'loadClass'
+				)
+			);
+		}
 	}
 
 	/**

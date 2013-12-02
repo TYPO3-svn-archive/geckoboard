@@ -47,15 +47,6 @@ class Tx_Geckoboard_Domain_Repository_PagesRepository extends Tx_Extbase_Persist
 	protected $tstampXHoursAgo;
 
 	/**
-	 * @param t3lib_db $databaseBackend
-	 * @return void
-	 */
-	public function injectDatabaseBackend(t3lib_db $databaseBackend) {
-		$this->databaseBackend = $databaseBackend;
-		$this->databaseBackend->connectDB();
-	}
-
-	/**
 	 * @return void
 	 */
 	public function __construct() {
@@ -76,6 +67,8 @@ class Tx_Geckoboard_Domain_Repository_PagesRepository extends Tx_Extbase_Persist
 
 		$this->tstampXHoursAgo = $GLOBALS['EXEC_TIME'] - (3600 * $hours);
 		$this->validPageWhere = sprintf(self::VALID_PAGE_WHERE, $this->doktypes);
+
+		$this->databaseBackend = $GLOBALS['TYPO3_DB'];
 	}
 
 	/**

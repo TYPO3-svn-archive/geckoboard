@@ -37,7 +37,7 @@ class Tx_Geckoboard_Widgets_LatestNewPages_Text extends Tx_Geckoboard_Widgets_La
 	 */
 	protected function loadGeckoboardWidget() {
 		if (count($this->data['pages']) == 0) {
-			throw new \Exception('no pages loaded from the db');
+			throw new \Exception(__CLASS__ . ': no pages loaded from the db');
 		}
 
 		/** @var CarlosIO\Geckoboard\Widgets\Text $widget */

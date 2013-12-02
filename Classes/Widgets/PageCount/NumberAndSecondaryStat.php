@@ -37,7 +37,7 @@ class Tx_Geckoboard_Widgets_PageCount_NumberAndSecondaryStat extends Tx_Geckoboa
 	 */
 	protected function loadGeckoboardWidget() {
 		if (!is_numeric($this->data['pageCount'])) {
-			throw new \Exception('pageCount was not successfully loaded from the db');
+			throw new \Exception(__CLASS__ . ': pageCount was not successfully loaded from the db');
 		}
 		/** @var CarlosIO\Geckoboard\Widgets\NumberAndSecondaryStat $widget */
 		$widget = new CarlosIO\Geckoboard\Widgets\NumberAndSecondaryStat();
